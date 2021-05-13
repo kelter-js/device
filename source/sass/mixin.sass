@@ -5,9 +5,14 @@
   text-transform: $transform
   font-weight: $font-weight
 
-@mixin footerHeaders()
-  margin: 0px
-  margin-bottom: 20px
-  @include fstyle(18px, 32px, $dark-color, 600)
-  @media (max-width: $mobile-width-only)
-    text-align: center
+@mixin elementSize($width, $height)
+  width: $width
+  min-height: $height
+
+@mixin absoluteElement($position, $top, $left)
+  position: $position
+  top: $top
+  left: $left
+
+@mixin setCenterPosition()
+  margin: 0 auto
