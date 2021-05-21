@@ -16,7 +16,7 @@
           <use class="logo__desktop" xlink:href="/img/icons/logo.svg#logo"/>
         </svg>
       </a>
-      <div class="page-header__wrapper container">
+      <div class="page-header__wrapper">
         <form action="https://echo.htmlacademy.ru/" method="post">
           <label class="visually-hidden" for="search">Поле ввода ключевых слов для поиска</label>
           <input class="page-header__search" type="search" name="search" id="search" placeholder="Поиск по сайту">
@@ -63,8 +63,8 @@
         </ul>
       </nav>
     </header>
-    <main class="page-inner">
-      <section class="breadcrumbs container">
+    <main class="page-inner container">
+      <section class="breadcrumbs">
         <h1 class="page-inner__header">Моноподы для селфи</h1>
         <ul class="breadcrumbs__list">
           <li class="breadcrumbs__item">
@@ -81,7 +81,7 @@
       <section class="filters">
         <h2 class="visually-hidden">Фильтрация товаров</h2>
         <div class="filters__wrapper">
-          <h3 class="filters__header">фильтр:</h3>
+          <h3>фильтр:</h3>
           <form method="get" action="https://echo.htmlacademy.ru">
             <fieldset class="filters__price-slider">
               <!--Позже смени на NoUiSlider и разберись в классах-->
@@ -96,7 +96,11 @@
                 </div>
                 <div class="price-controls">
                   <input type="number" name="min-price" value="0" min="0" aria-label="Поле с минимальной ценой">
-                  <input type="number" name="max-price" value="30000" max="30000" aria-label="Поле с максимальной ценой">
+                  <input type="number" name="max-price" value="5000" max="5000" aria-label="Поле с максимальной ценой">
+                </div>
+                <div class="output">
+                  <p>От <span class="output-start">0</span></p>
+                  <p>От <span class="output-end">5000</span></p>
                 </div>
               </div>
             </fieldset>
@@ -138,7 +142,7 @@
                 </li>
               </ul>
             </fieldset>
-            <button type="submit" class="filters__submit">показать</button>
+            <button type="submit" class="filters__submit navigation-text">показать</button>
           </form>
         </div>
       </section>
@@ -148,7 +152,7 @@
           <h3 class="sorting__header">сортировка:</h3>
           <ul class="sorting__types-list">
             <li class="sorting__types-item">
-              <a class="sorting__link" href="#">По цене</a>
+              <a class="sorting__link sorting__link--selected" href="#">По цене</a>
             </li>
             <li class="sorting__types-item">
               <a class="sorting__link" href="#">По типу</a>
@@ -177,49 +181,49 @@
           <li class="goods__item" tabindex="0">
             <img src="" width="360" height="380" alt="Изображение любительской селфи-палки">
             <div class="goods__hidden-buttons">
-              <a class="goods__buy-button" aria-label="Добавить любительскую селфи-палку в корзину">в корзину</a>
+              <a class="goods__buy-button navigation-text" aria-label="Добавить любительскую селфи-палку в корзину">в корзину</a>
               <a class="goods__comparison-button" aria-label="Добавить любительскую селфи-палку к сравнению">Добавить к сравнению</a>
             </div>
-            <h3><a class="goods__item-name" href="">Любительская селфи-палка</a></h3>
+            <h3><a class="goods__item-name navigation-text" href="">Любительская селфи-палка</a></h3>
             <p class="goods__item-price">1 100 руб.</p>
           </li>
 
           <li class="goods__item" tabindex="0">
             <img src="" width="360" height="380" alt="Изображение профессиональной селфи-палки">
             <div class="goods__hidden-buttons">
-              <a class="goods__buy-button" aria-label="Добавить профессиональной селфи-палку в корзину">в корзину</a>
+              <a class="goods__buy-button navigation-text" aria-label="Добавить профессиональной селфи-палку в корзину">в корзину</a>
               <a class="goods__comparison-button" aria-label="Добавить профессиональной селфи-палку к сравнению">Добавить к сравнению</a>
             </div>
-            <h3><a class="goods__item-name" href="">Профессиональная селфи-палка</a></h3>
+            <h3><a class="goods__item-name navigation-text" href="">Профессиональная селфи-палка</a></h3>
             <p class="goods__item-price">1 500 руб.</p>
           </li>
 
           <li class="goods__item" tabindex="0">
             <img src="" width="360" height="380" alt="Изображение непотопляемой селфи-палки">
             <div class="goods__hidden-buttons">
-              <a class="goods__buy-button" aria-label="Добавить непотопляемую селфи-палку в корзину">в корзину</a>
+              <a class="goods__buy-button navigation-text" aria-label="Добавить непотопляемую селфи-палку в корзину">в корзину</a>
               <a class="goods__comparison-button" aria-label="Добавить непотопляемую селфи-палку к сравнению">Добавить к сравнению</a>
             </div>
-            <h3><a class="goods__item-name" href="">Непотопляемая селфи-палка</a></h3>
+            <h3><a class="goods__item-name navigation-text" href="">Непотопляемая селфи-палка</a></h3>
             <p class="goods__item-price">1 500 руб.</p>
           </li>
 
           <li class="goods__item" tabindex="0">
             <img src="" width="360" height="380" alt="Изображение селфи-палки «Следуй за мной»">
             <div class="goods__hidden-buttons">
-              <a class="goods__buy-button" aria-label="Добавить селфи-палку «Следуй за мной» в корзину">в корзину</a>
+              <a class="goods__buy-button navigation-text" aria-label="Добавить селфи-палку «Следуй за мной» в корзину">в корзину</a>
               <a class="goods__comparison-button" aria-label="Добавить селфи-палку «Следуй за мной» к сравнению">Добавить к сравнению</a>
             </div>
-            <h3><a class="goods__item-name" href="">Селфи-палка «Следуй за мной»</a></h3>
+            <h3><a class="goods__item-name navigation-text" href="">Селфи-палка «Следуй за мной»</a></h3>
             <p class="goods__item-price">1 900 руб.</p>
           </li>
         </ul>
       </section>
       <div class="pagination-wrapper">
-        <a class="pagination__previous" href="#">назад</a>
+        <a class="pagination__movement" href="#">назад</a>
         <ul class="pagination__list">
           <li class="pagination__item pagination__item--current">
-            <a class="pagination__link" href="">1</a>
+            <a class="pagination__link pagination__link--selected" href="">1</a>
           </li>
           <li class="pagination__item">
             <a class="pagination__link" href="">2</a>
@@ -228,24 +232,24 @@
             <a class="pagination__link" href="">3</a>
           </li>
         </ul>
-        <a class="pagination__next" href="#">вперед</a>
+        <a class="pagination__movement" href="#">вперед</a>
       </div>
     </main>
-    <footer class="page-footer">
+    <footer class="page-footer container">
       <div class="page-footer__address">
         <img class="page-footer__logo" src="" alt="">
-        <p class="page-footer__address-text">г. Москва, ул. Строителей, 15</p>
+        <p class="main-text main-text--footer">г. Москва, ул. Строителей, 15</p>
       </div>
       <div class="page-footer__social-service-block">
         <ul class="page-footer__service-list">
           <li class="page-footer__service-item">
-            <a class="page-footer__service-link" href="#">доставка</a>
+            <a class="navigation-text navigation-text--footer" href="#">доставка</a>
           </li>
           <li class="page-footer__service-item">
-            <a class="page-footer__service-link" href="#">гарантия</a>
+            <a class="navigation-text navigation-text--footer" href="#">гарантия</a>
           </li>
           <li class="page-footer__service-item">
-            <a class="page-footer__service-link" href="#">контакты</a>
+            <a class="navigation-text navigation-text--footer" href="#">контакты</a>
           </li>
         </ul>
         <ul class="page-footer__social-list">
@@ -269,19 +273,19 @@
       <div class="page-footer__navigation-block">
         <ul class="page-footer__navigation-list">
           <li class="page-footer__navigation-item">
-            <a class="page-footer__navigation-link" href="#">Валентин Петухов</a>
+            <a class="main-text main-text--footer" href="#">Валентин Петухов</a>
           </li>
           <li class="page-footer__navigation-item">
-            <a class="page-footer__navigation-link" href="#">Выйти</a>
+            <a class="main-text main-text--footer" href="#">Выйти</a>
           </li>
           <li class="page-footer__navigation-item">
-            <a class="page-footer__navigation-link" href="#">Сравнить</a>
+            <a class="main-text main-text--footer" href="#">Сравнить</a>
           </li>
           <li class="page-footer__navigation-item">
-            <a class="page-footer__navigation-link" href="#">Корзина</a>
+            <a class="main-text main-text--footer" href="#">Корзина</a>
           </li>
         </ul>
-        <a class="page-footer__phone" href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
+        <a class="main-text main-text--footer" href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
         <a class="page-footer__dev-link" href="#">
           <img src="" alt="" role="img" aria-label="Разработчик макета HTMLAcademy">
         </a>
