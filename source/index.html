@@ -20,21 +20,23 @@
 </head>
 
 <body class="page__body">
-  <header class="page-header">
-    <div class="container">
+  <header class="page-header container">
+    <div class="page-header__wrapper">
       <a class="page-header__logo" href="#">
         <svg class="logo" width="163" height="35" role="img" aria-label="Device - онлайн супермаркет электротехники">
           <use class="logo__desktop" xlink:href="/img/icons/logo.svg#logo" />
         </svg>
       </a>
-      <div class="page-header__wrapper">
+      <div class="page-header__content-wrapper">
         <form action="https://echo.htmlacademy.ru/" method="post">
           <label class="visually-hidden" for="search">Поле ввода ключевых слов для поиска</label>
           <input class="page-header__search" type="search" name="search" id="search" placeholder="Поиск по сайту">
         </form>
-        <a class="main-text" href="">Войти</a>
-        <a class="main-text" href="">Сравнить</a>
-        <a class="main-text" href="">Корзина</a>
+        <div class="page-header__link-wrapper">
+          <a class="main-text" href="">Войти</a>
+          <a class="main-text" href="">Сравнить</a>
+          <a class="main-text" href="">Корзина</a>
+        </div>
       </div>
       <div class="page-header__catalog-wrapper catalog">
         <button class="page-header__catalog" type="button">каталог товаров</button>

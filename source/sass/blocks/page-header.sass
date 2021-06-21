@@ -1,16 +1,24 @@
-.page-header
+.page-header__wrapper
+  position: relative
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  align-content: flex-start
+  min-height: 256px
+  margin-top: 40px
+  padding-top: 44px
+  padding-left: 60px
+  padding-right: 60px
   background-color: $yellow
 
-.page-header input[type="search"]::placeholder
+.page-header__search::placeholder
   font-family: "Open Sans", "Arial", sans-serif
   @include fstyle(15px, 20.4px, rgba($black, 0.3), 300)
-
-.page-header__wrapper a
-  text-decoration: none
 
 .page-header__catalog-wrapper button
   background: none
   border: none
+  margin-bottom: 17px
 
 .page-header__catalog-wrapper button,
 .page-header__navigation a
@@ -24,5 +32,62 @@
 .page-header__catalog-wrapper ul
   list-style: none
 
-.page-header__catalog-wrapper a
+.page-header__link-wrapper a,
+.catalog__list a,
+.page-header__content-wrapper a
   text-decoration: none
+
+.page-header__logo
+  position: absolute
+  top: -20px
+  left: 60px
+  z-index: 1
+
+.page-header__content-wrapper
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  width: 100%
+  margin-bottom: 50px
+
+.page-header__content-wrapper form
+  width: 150px
+
+.page-header__search
+  background-color: transparent
+  border: none
+
+  &:focus
+    background-color: white
+    &::placeholder
+      color: black
+
+.page-header__link-wrapper
+  display: grid
+  grid-template-columns: 1fr auto auto
+  column-gap: 63px
+
+.navigation__list
+  display: grid
+  grid-template-columns: auto 1fr auto
+  column-gap: 38px
+  width: 520px
+  margin: 0
+  padding: 0
+  list-style: none
+
+.navigation__item:last-of-type
+  justify-self: end
+
+.catalog__list
+  display: none
+  grid-template-columns: repeat(3, 1fr)
+  grid-template-rows: repeat(3, 1fr)
+  gap: 20px 61px
+  margin: 0
+  padding: 0
+  padding-top: 12px
+  list-style: none
+  z-index: 1
+
+.catalog__item:last-of-type
+  grid-row: 3
