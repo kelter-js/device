@@ -1,16 +1,87 @@
+.service
+  min-height: 403px
+  background: linear-gradient($white 28.5%, $light-grey 28.5%)
+
+.service .container
+  display: flex
+  min-height: inherit
+  overflow: auto
+
+.service ul
+  position: relative
+  width: 284px
+  margin: 0
+  margin-top: 95px
+  margin-right: 116px
+  padding: 0
+  list-style: none
+
+  &::before
+    content: ""
+    position: absolute
+    top: -80px
+    right: 0
+    height: 320px
+    width: 7px
+    background-color: $black
+
+.service__item
+  position: relative
+  display: flex
+  justify-content: center
+  width: 160px
+  margin-bottom: 30px
+
+  &::before
+    content: ""
+    position: absolute
+    top: 8px
+    left: 0
+    width: 160px
+    height: 8px
+    background-color: $dark-yellow
+    z-index: 0
+
+
 .service__button
+  position: relative
+  padding: 0
   background: none
   border: none
-
-.service__delivery-button--selected
-  color: $yellow
+  letter-spacing: 1px
 
 .service__wrapper
   display: none
+  margin-top: 86px
 
 .service__wrapper p
+  width: 495px
+  margin: 0
+  padding: 0
   font-family: "Open Sans", "Arial", sans-serif
-  letter-spacing: 3px
+  letter-spacing: 1.5px
 
   @include fstyle(15px, 30px, $black, 300)
 
+.service h3
+  margin: 0
+  margin-bottom: 40px
+  padding: 0
+
+
+.service__item--selected
+  width: 258px
+  margin: 0
+  margin-bottom: 30px
+  padding-top: 9px
+  padding-bottom: 9px
+  padding-left: 19px
+  justify-content: flex-start
+  background-color: $black
+  color: $light-yellow
+
+  button
+    color: $light-yellow
+
+  &::before
+    content: none

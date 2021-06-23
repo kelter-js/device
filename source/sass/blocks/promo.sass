@@ -61,8 +61,11 @@
   column-gap: 64px
 
 .promo__carousel-item a
+  position: relative
+  margin-left: 44px
   letter-spacing: 3.6px
   text-decoration: none
+
 
   @include fstyle(18px, 22px, $black, 800, uppercase)
 
@@ -96,6 +99,7 @@
     content: "01"
     top: 0
     right: 0
+    z-index: -1
 
     @include fstyle(179px, 219.3px, $white, 800)
 
@@ -106,21 +110,6 @@
 .promo__carousel-item:nth-of-type(3) .promo__item-info
   &::after
     content: "03"
-    z-index: -1
-
-.promo__item-link
-  position: relative
-  margin-left: 44px
-
-  &::before
-    content: ""
-    position: absolute
-    top: 7px
-    left: -44px
-    width: 220px
-    height: 8px
-    background-color: $dark-yellow
-    z-index: -1
 
 .promo__item-navigation
   display: flex

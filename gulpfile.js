@@ -5,7 +5,9 @@ const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
-var webp = require("gulp-webp");
+const webp = require("gulp-webp");
+const svgstore = require("gulp-svgstore");
+const rename = require("gulp-rename");
 
 // Styles
 
@@ -29,6 +31,13 @@ gulp.task("webp", function () {
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest("source/img"));
 });
+
+gulp.task("sprite", function () {
+  return gulp.src("source/img/icons/*.svg")
+  .pipe(svgstore())
+  .pipe(rename("main-sprite.svg"))
+  .pipe(gulp.dest("build/img/icons"))
+})
 
 // Server
 
