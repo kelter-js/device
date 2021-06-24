@@ -1,5 +1,56 @@
+.about-us
+  position: relative
+  margin-bottom: 86px
+  &::before
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    height: 7px
+    width: 80px
+    background-color: $black
+
+.about-us h2
+  margin-top: 50px
+  margin-bottom: 50px
+
+.about-us p
+  margin: 0
+  margin-bottom: 40px
+  padding: 0
+
 .about-us li
+  position: relative
+  height: 22px
+  margin-left: 32px
+  margin-bottom: 21px
+
   @include fstyle(16px, 28px, $black, 800)
+
+  &::before
+    content: ""
+    position: absolute
+    left: -32px
+    top: 10px
+    height: 4px
+    width: 4px
+    border-radius: 50%
+    border: 2px solid $light-grey
+
+.about-us ul
+  margin: 0
+  margin-top: 20px
+  margin-bottom: 84px
+  padding: 0
+  list-style: none
 
 .about-us a
   text-decoration: none
+
+.navigation-text
+  position: relative
+  margin-left: 24px
+
+  &::before
+    left: -24px
+    width: 260px

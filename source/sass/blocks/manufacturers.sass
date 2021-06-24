@@ -1,6 +1,21 @@
+.manufacturers
+  margin-bottom: 90px
+  grid-column: 1 / -1
+
 .manufacturers ul
   display: flex
   justify-content: space-between
   list-style: none
   padding: 0
   margin: 0
+
+.manufacturers__item .manufacturers__photo-bw
+  display: block
+
+.manufacturers__item:hover .manufacturers__photo-bw
+  display: none
+  & + picture
+    display: block
+
+.manufacturers__photo-colorful
+  display: none
