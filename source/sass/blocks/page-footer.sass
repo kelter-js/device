@@ -1,7 +1,105 @@
 .page-footer
   display: flex
-  justify-content: space-between
+  min-height: 278px
+  padding-top: 46px
   background: $grey
 
 .page-footer a
   text-decoration: none
+
+.page-footer__address
+  width: 212px
+  margin-top: 18px
+  margin-right: 156px
+
+  &::before
+    top: 175px
+    background-color: $darker-yellow
+
+.page-footer__address p
+  margin: 0
+  margin-top: 40px
+  padding: 0
+
+.logo__footer
+  color: $dark-yellow
+
+.page-footer__navigation-list,
+.page-footer__social-list,
+.page-footer__service-list
+  margin: 0
+  padding: 0
+  list-style: none
+
+.page-footer__navigation-list
+  display: flex
+
+.page-footer__navigation-item
+  margin-right: 62px
+
+  &:last-child
+    margin-right: 0
+
+.page-footer__social-list
+  display: flex
+  height: 32px
+
+.page-footer__service-list
+  display: flex
+  height: 22px
+  margin-top: 93px
+  margin-bottom: 67px
+
+.page-footer__service-item
+  margin-right: 36px
+
+  &:last-child
+    margin-right: 0
+
+.page-footer__social-item
+  height: 32px
+  width: 32px
+  margin-right: 32px
+
+  &:last-child
+    margin-right: 0
+
+.logo__social
+  color: $white-rgba
+
+.page-footer__social-link:hover .logo__social,
+.page-footer__social-link:focus .logo__social
+  color: $white-rgba-hover
+
+.page-footer__social-link:active .logo__social
+  color: $white-rgba-active
+
+.page-footer__social-service-block
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  align-content: flex-start
+  width: 423px
+  margin-right: 68px
+
+.page-footer__navigation-block
+  display: grid
+  grid-template-rows: 93px 87px 34px
+  width: 294px
+
+.page-footer__navigation-block .main-text--footer
+  justify-self: end
+
+.logo__academy
+  justify-self: end
+  color: $dark-yellow
+
+.page-footer__dev-link
+  justify-self: end
+
+.page-footer__dev-link:hover .logo__academy,
+.page-footer__dev-link:focus .logo__academy
+  color: $dark-yellow-hover
+
+.page-footer__dev-link:active .logo__academy
+  color: $dark-yellow-active

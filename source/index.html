@@ -274,7 +274,7 @@
           </li>
         </ul>
       </section>
-      <section class="about-us">
+      <section class="about-us container-decoration">
         <h2 class="header">О нас</h2>
         <p class="feedback-text">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
         <p class="feedback-text">Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает
@@ -286,7 +286,7 @@
         </ul>
         <a class="navigation-text button" href="#">подробнее о нас</a>
       </section>
-      <section class="contacts">
+      <section class="contacts container-decoration">
         <h2 class="header">Контакты</h2>
         <p class="feedback-text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить
           работоспособность покупки. Всякое бывает.</p>
@@ -294,13 +294,15 @@
             <source type="image/webp" srcset="img/map.webp 1x, img/map@2x.webp 2x">
             <img src="img/map.png" srcset="img/map@2x.png 2x" alt="Изображение местоположения нашего офиса по адресу ул. Строителей, д. 15" height="222" width="560">
           </picture>
-        <a class="navigation-text" href="#">напишите нам</a>
+        <a class="navigation-text button" href="#">напишите нам</a>
       </section>
     </div>
   </main>
   <footer class="page-footer container">
-    <div class="page-footer__address">
-      <img class="page-footer__logo" src="" alt="">
+    <div class="page-footer__address container-decoration">
+      <svg class="logo" width="163" height="35" role="img" aria-label="Device - онлайн супермаркет электротехники">
+        <use class="logo__footer" xlink:href="/img/icons/main-sprite.svg#logo"/>
+      </svg>
       <p class="main-text main-text--footer">г. Москва, ул. Строителей, 15</p>
     </div>
     <div class="page-footer__social-service-block">
@@ -318,17 +320,26 @@
       <ul class="page-footer__social-list">
         <li class="page-footer__social-item">
           <a class="page-footer__social-link" href="#">
-            <img src="" alt="" role="img" aria-label="Мы на Facebook">
+            <p class="visually-hidden">Мы в Facebook</p>
+            <svg width="32" height="32">
+              <use class="logo__social" xlink:href="/img/icons/main-sprite.svg#fb-social"/>
+            </svg>
           </a>
         </li>
         <li class="page-footer__social-item">
           <a class="page-footer__social-link" href="#">
-            <img src="" alt="" role="img" aria-label="Мы в Instagram">
+            <p class="visually-hidden">Мы в Instagram</p>
+            <svg width="32" height="32">
+              <use class="logo__social" xlink:href="/img/icons/main-sprite.svg#insta-social"/>
+            </svg>
           </a>
         </li>
         <li class="page-footer__social-item">
           <a class="page-footer__social-link" href="#">
-            <img src="" alt="" role="img" aria-label="Мы в Twitter">
+            <p class="visually-hidden">Мы в Twitter</p>
+            <svg width="32" height="32">
+              <use class="logo__social" xlink:href="/img/icons/main-sprite.svg#twitter-social"/>
+            </svg>
           </a>
         </li>
       </ul>
@@ -347,7 +358,10 @@
       </ul>
       <a class="main-text main-text--footer" href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
       <a class="page-footer__dev-link" href="#">
-        <img src="" alt="" role="img" aria-label="Разработчик макета HTMLAcademy">
+        <p class="visually-hidden">Разработано в HTMLAcademy</p>
+        <svg width="32" height="32">
+          <use class="logo__academy" xlink:href="/img/icons/main-sprite.svg#academy"/>
+        </svg>
       </a>
     </div>
 
