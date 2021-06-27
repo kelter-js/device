@@ -1,6 +1,37 @@
+.breadcrumbs
+  margin-bottom: 50px
+
+.breadcrumbs h1
+  margin: 0
+  margin-bottom: 30px
+  margin-left: 60px
+  padding: 0
+
 .breadcrumbs ul
   display: flex
+  margin: 0
+  margin-left: 60px
+  padding: 0
   list-style: none
+
+.breadcrumbs li
+  position: relative
+  margin-right: 40px
+
+  &:first-child
+    &::before
+      content: none
+
+  &::before
+    content: ""
+    position: absolute
+    top: 8px
+    left: -18px
+    border: solid $black
+    border-width: 0 1px 1px 0
+    display: inline-block
+    padding: 2px
+    transform: rotate(-45deg)
 
 .breadcrumbs a
   text-decoration: none
