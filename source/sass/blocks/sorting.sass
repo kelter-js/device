@@ -41,25 +41,30 @@
     margin-right: 0
 
 .sorting__price-item
-  position: relative
   height: 18px
   width: 18px
   margin-right: 16px
 
-  &::before
+  &:last-child
+    margin-right: 0
+
+.sorting__price-item a
+  position: relative
+  display: block
+  height: 100%
+  width: 100%
+  z-index: 12
+
+  &::after
     content: ""
     position: absolute
     top: 0
     left: 3px
     border: 5px solid transparent
+    border-bottom: 10px solid rgba($black-rgb, 0.2)
+
+.sorting__price-item:last-child a
+  &::after
+    top: 5px
     border-bottom: 10px solid $black-rgb
-
-  &:last-child
-    margin-right: 0
-    &::before
-      top: 5px
-      transform: rotate(180deg)
-
-.sorting__price-item a
-  height: 100%
-  width: 100%
+    transform: rotate(180deg)

@@ -4,11 +4,36 @@
   z-index: 2
 
 .filters__wrapper h3
+  margin: 0
+  margin-top: 25px
+  margin-bottom: 111px
+  padding: 0
   letter-spacing: 1.6px
 
   @include fstyle(16px, 20px, $black, 800, uppercase)
 
+.filters__price-slider,
+.filters__color,
+.filters__bluetooth-support
+  position: relative
+  margin: 0
+  padding: 0
+  border: none
+
+  &::before
+    content: ""
+    position: absolute
+    top: -61px
+    left: 0
+    height: 2px
+    width: 200px
+    background-color: $black
+
+.filters__color
+  margin-bottom: 53px
+
 .filters__wrapper legend
+  margin-bottom: 30px
   letter-spacing: 1.4px
 
   @include fstyle(14px, 17px, $black, 800)
@@ -25,3 +50,14 @@
   font-family: "Open Sans", "Arial", sans-serif
 
   @include fstyle(14px, 19px, $black, 300)
+
+.filters__price-slider
+  margin-bottom: 54px
+
+.filters__bluetooth-support ul
+  margin: 0
+  padding: 0
+  list-style: none
+
+.filters__bluetooth-support
+  margin-bottom: 50px
