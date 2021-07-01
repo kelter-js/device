@@ -30,13 +30,16 @@
     background-color: $black
 
 .filters__color
-  margin-bottom: 53px
+  margin-bottom: 56px
 
 .filters__wrapper legend
-  margin-bottom: 30px
+  margin-bottom: 32px
   letter-spacing: 1.4px
 
   @include fstyle(14px, 17px, $black, 800)
+
+.filters__price-slider legend
+  margin-bottom: 30px
 
 .output
   display: flex
@@ -54,10 +57,47 @@
 .filters__price-slider
   margin-bottom: 54px
 
-.filters__bluetooth-support ul
+.filters__bluetooth-support ul,
+.filters__color ul
   margin: 0
   padding: 0
   list-style: none
 
 .filters__bluetooth-support
-  margin-bottom: 50px
+  margin-bottom: 53px
+
+.filters__bluetooth-support li
+  margin-bottom: 21px
+  margin-left: 40px
+
+  &:last-child
+    margin-bottom: 0
+
+.filters__output
+  display: flex
+  margin-top: 8px
+
+.filters__output p
+  margin: 0
+  margin-right: 69px
+  padding: 0
+
+  &:last-child
+    margin-right: 0
+
+.filters__color li
+  margin-bottom: 20px
+  margin-left: 42px
+
+  &:last-child
+    margin-bottom: 0
+
+.filters__submit
+  margin-left: 37px
+  padding: 0
+  letter-spacing: 1.9px
+
+  &::before
+    top: 8px
+    left: -37px
+    width: 200px
