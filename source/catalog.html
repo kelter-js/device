@@ -97,7 +97,6 @@
             <h3>фильтр:</h3>
             <form method="get" action="https://echo.htmlacademy.ru">
               <fieldset class="filters__price-slider">
-                <!--Позже смени на NoUiSlider и разберись в классах-->
                 <legend>Стоимость</legend>
                 <div class="filters__range-filter">
                   <div class="range-controls">
@@ -125,7 +124,7 @@
                     <label for="filter-black">Чёрный</label>
                   </li>
                   <li class="colors__item">
-                    <input class="visually-hidden colors__input-checkbox" type="checkbox" name="white" id="filter-white">
+                    <input class="visually-hidden colors__input-checkbox" type="checkbox" name="white" id="filter-white" disabled checked>
                     <label for="filter-white">Белый</label>
                   </li>
                   <li class="colors__item">
@@ -171,7 +170,7 @@
                 <a class="sorting__link" href="#">По типу</a>
               </li>
               <li class="sorting__types-item">
-                <a class="sorting__link" href="#">По популярности</a>
+                <a class="sorting__link" href="#">По популярноси</a>
               </li>
             </ul>
             <ul class="sorting__by-price-list">
@@ -307,7 +306,7 @@
           </li>
         </ul>
       </div>
-      <div class="page-footer__navigation-block">
+      <div class="page-footer__navigation-block page-footer__navigation-block--inner">
         <ul class="page-footer__navigation-list">
           <li class="page-footer__navigation-item page-footer__navigation-item--inner">
             <a class="main-text main-text--footer" href="#">Валентин Петухов</a>

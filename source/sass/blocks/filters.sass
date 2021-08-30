@@ -1,11 +1,15 @@
 .filters
   grid-area: filter
+  grid-row: 1 / -1
   padding-left: 70px
   z-index: 2
+  background-image: linear-gradient(to bottom, $darker-grey 0px, $darker-grey 70px, $light-grey 70px, $light-grey)
+
+.filters__wrapper
+  padding-top: 25px
 
 .filters__wrapper h3
   margin: 0
-  margin-top: 25px
   margin-bottom: 111px
   padding: 0
   letter-spacing: 1.6px
@@ -87,7 +91,6 @@
 
 .filters__color li
   margin-bottom: 20px
-  margin-left: 42px
 
   &:last-child
     margin-bottom: 0
@@ -101,3 +104,31 @@
     top: 8px
     left: -37px
     width: 200px
+
+.colors__item label
+  margin-left: 18px
+
+.colors__input-checkbox + label 
+  &::before
+    content: ""
+    position: relative
+    display: inline-block
+    top: 8px
+    left: -18px
+    width: 24px
+    height: 24px
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1' y='1' width='22' height='22' rx='1' stroke='black' stroke-width='2'/%3E%3C/svg%3E%0A")
+    background-repeat: no-repeat
+    border: none
+
+.colors__input-checkbox:checked + label 
+  &::before
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1' y='1' width='22' height='22' rx='1' stroke='black' stroke-width='2'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7.07692 10.75L5.38461 12.5L10.4615 17.75L18.9231 9L17.2308 7.25L10.4615 14.25L7.07692 10.75Z' fill='black'/%3E%3C/svg%3E%0A")
+
+.colors__input-checkbox:not(:disabled):hover + label
+  &::before
+    opacity: 0.6
+
+.colors__input-checkbox:disabled + label  
+  opacity: 0.25
+  
