@@ -99,20 +99,18 @@
               <fieldset class="filters__price-slider">
                 <legend>Стоимость</legend>
                 <div class="filters__range-filter">
-                  <div class="range-controls">
-                    <div class="scale">
-                      <div class="bar"></div>
-                    </div>
-                    <div class="toggle toggle-min" tabindex="0" aria-label="Ползунок минимальной цены"></div>
-                    <div class="toggle toggle-max" tabindex="0" aria-label="Ползунок максимальной цены"></div>
+                  <div class="filters__scale">
+                    <div class="filters__bar"></div>
                   </div>
-                  <div class="price-controls">
-                    <input type="number" name="min-price" value="0" min="0" aria-label="Поле с минимальной ценой">
-                    <input type="number" name="max-price" value="5000" max="5000" aria-label="Поле с максимальной ценой">
-                  </div>
-                  <div class="filters__output">
-                    <p>От <span class="output-start">0</span></p>
-                    <p>От <span class="output-end">5000</span></p>
+                  <div class="filters__toggle filters__toggle--min" tabindex="0" aria-label="Ползунок минимальной цены"></div>
+                  <div class="filters__toggle filters__toggle--max" tabindex="0" aria-label="Ползунок максимальной цены"></div>
+                  <div class="filters__price-controls">
+                    <label>от
+                      <input class="filters__price" type="number" name="min-price" value="0" min="0" aria-label="Поле с минимальной ценой">
+                    </label>
+                    <label>до
+                      <input class="filters__price" type="number" name="max-price" value="5000" max="5000" aria-label="Поле с максимальной ценой">
+                    </label>
                   </div>
                 </div>
               </fieldset>

@@ -27,7 +27,6 @@
   &::before
     content: ""
     position: absolute
-    top: -61px
     left: 0
     height: 2px
     width: 200px
@@ -36,14 +35,17 @@
 .filters__color
   margin-bottom: 56px
 
+  &::before
+    top: -55px
+
 .filters__wrapper legend
-  margin-bottom: 32px
+  margin-bottom: 23px
   letter-spacing: 1.4px
 
   @include fstyle(14px, 17px, $black, 800)
 
 .filters__price-slider legend
-  margin-bottom: 30px
+  margin-bottom: 39px
 
 .output
   display: flex
@@ -59,7 +61,12 @@
   @include fstyle(14px, 19px, $black, 300)
 
 .filters__price-slider
+  margin: 0
   margin-bottom: 54px
+  padding: 0
+
+  &::before
+    top: -71px
 
 .filters__bluetooth-support ul,
 .filters__color ul
@@ -68,14 +75,11 @@
   list-style: none
 
 .filters__bluetooth-support
-  margin-bottom: 53px
+  min-height: 111px
+  margin-bottom: 45px
 
-.filters__bluetooth-support li
-  margin-bottom: 21px
-  margin-left: 40px
-
-  &:last-child
-    margin-bottom: 0
+  &::before
+    top: -62px
 
 .filters__output
   display: flex
@@ -90,7 +94,7 @@
     margin-right: 0
 
 .filters__color li
-  margin-bottom: 20px
+  margin-bottom: 15px
 
   &:last-child
     margin-bottom: 0
@@ -105,6 +109,9 @@
     left: -37px
     width: 200px
 
+.colors__item
+  height: 24px
+
 .colors__item label
   margin-left: 18px
 
@@ -113,7 +120,7 @@
     content: ""
     position: relative
     display: inline-block
-    top: 8px
+    top: 7px
     left: -18px
     width: 24px
     height: 24px
@@ -132,3 +139,101 @@
 .colors__input-checkbox:disabled + label  
   opacity: 0.25
   
+.filters__scale
+  position: relative
+  height: 2px
+  width: 200px
+  margin-bottom: 17px
+  background-color: $black-rgba-darker
+
+.filters__bar
+  position: absolute
+  left: 20px
+  height: 2px
+  width: 94px
+  background-color: $light-green
+
+.filters__range-filter
+  position: relative
+
+.filters__toggle
+  height: 20px
+  width: 20px
+  border-radius: 50%
+  background-color: $white
+
+.filters__toggle--min,
+.filters__toggle--max
+  position: absolute
+  &::before
+    content: ""
+    position: absolute
+    top: 8px
+    left: 8px
+    height: 4px
+    width: 4px
+    border-radius: 50%
+    background-color: $darker-grey
+
+.filters__toggle--min
+  top: -9px
+  left: 0
+
+.filters__toggle--max
+  top: -9px
+  left: 114px
+
+.filters__price-controls
+  display: flex
+  height: 16px
+
+.filters__price-controls label,
+.filters__price
+  line-height: 16px
+
+.filters__price
+  width: 78px
+  border: none
+  background-color: transparent
+  appearance: none
+  -moz-appearance: none
+  -webkit-appearance: none
+
+.colors__list
+  min-height: 187px
+
+.filters__bluetooth-support legend
+  margin-bottom: 30px
+
+.bluetooth__radio + label
+  position: relative
+  margin-left: 40px
+
+  &::before
+    content: ''
+    height: 24px
+    width: 24px
+    top: -3px
+    left: -40px
+    position: absolute
+    box-sizing: border-box
+    border: 2px solid $black
+    border-radius: 50%
+
+.bluetooth__radio:checked + label
+  &::after
+    content: ''
+    position: absolute
+    top: 5px
+    left: -32px
+    height: 8px
+    width: 8px
+    border-radius: 50%
+    background-color: $black
+
+.bluetooth__item
+  min-height: 24px
+  margin-bottom: 16px
+
+  &:last-child
+    margin-bottom: 0
