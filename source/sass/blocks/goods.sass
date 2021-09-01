@@ -86,3 +86,25 @@
   &::before
     width: 200px
     left: -37px
+
+.goods__item--new
+  position: relative
+  
+  &::after
+    content: 'new'
+    position: absolute
+    top: 29px
+    right: 27px
+    height: 37px
+    width: 60px
+    padding-top: 23px
+    border: 2px solid $black-rgba
+    border-radius: 50%
+    text-align: center
+
+    @include fstyle(12px, 14.7px, $black-rgba, 800, uppercase)
+
+.goods__item--new:hover
+  &::after
+    display: none
+    

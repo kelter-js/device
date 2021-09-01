@@ -1,8 +1,10 @@
 .page-footer
+  background: $grey
+
+.page-footer .container
   display: flex
   min-height: 278px
   padding-top: 46px
-  background: $grey
 
 .page-footer a
   text-decoration: none
@@ -117,3 +119,44 @@
 
 .page-footer__navigation-block--inner
   width: 428px
+
+.page-footer__user-icon,
+.page-footer__compare-icon,
+.page-footer__cart-icon
+  position: relative
+  &::before
+    content: ''
+    position: absolute
+    top: 5px
+    background-repeat: no-repeat
+
+
+.page-footer__user-icon
+  &::before
+    height: 14px
+    width: 13px
+
+.page-footer__user--login
+  &::before
+    left: -24px
+    background-image: url("data:image/svg+xml,%3Csvg width='13' height='14' viewBox='0 0 13 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.49996 2.33325C7.69704 2.33325 8.66663 3.37742 8.66663 4.66659C8.66663 5.95575 7.69704 6.99992 6.49996 6.99992C5.30288 6.99992 4.33329 5.95575 4.33329 4.66659C4.33329 3.37742 5.30288 2.33325 6.49996 2.33325ZM6.49996 11.6666C6.49996 11.6666 10.8333 11.6666 10.8333 10.4999C10.8333 9.09992 8.72079 7.58325 6.49996 7.58325C4.27913 7.58325 2.16663 9.09992 2.16663 10.4999C2.16663 11.6666 6.49996 11.6666 6.49996 11.6666Z' fill='%23FFC600'/%3E%3C/svg%3E%0A")
+
+.page-footer__user--logout
+  &::before
+    left: -26px
+    background-image: url("data:image/svg+xml,%3Csvg width='13' height='14' viewBox='0 0 13 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.50008 2.33337C7.69716 2.33337 8.66675 3.37754 8.66675 4.66671C8.66675 5.95587 7.69716 7.00004 6.50008 7.00004C5.303 7.00004 4.33341 5.95587 4.33341 4.66671C4.33341 3.37754 5.303 2.33337 6.50008 2.33337ZM6.50008 11.6667C6.50008 11.6667 10.8334 11.6667 10.8334 10.5C10.8334 9.10004 8.72091 7.58337 6.50008 7.58337C4.27925 7.58337 2.16675 9.10004 2.16675 10.5C2.16675 11.6667 6.50008 11.6667 6.50008 11.6667Z' fill='%23F7E296'/%3E%3C/svg%3E%0A")
+
+.page-footer__compare-icon
+  &::before
+    left: -25px
+    height: 14px
+    width: 14px
+    background-image: url('../img/icons/compare.svg')
+
+.page-footer__cart-icon
+  &::before
+    top: 6px
+    left: -22px
+    height: 10px
+    width: 10px
+    background-image: url('../img/icons/cart.svg')
