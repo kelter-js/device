@@ -20,21 +20,37 @@
   <body class="page__body">
     <header class="page-header page-header--inner container">
       <div class="page-header__wrapper">
-        <a class="page-header__logo" href="#">
+        <a class="page-header__logo" href="index.html">
           <svg class="logo" width="163" height="35" role="img" aria-label="Device - онлайн супермаркет электротехники">
             <use class="logo__desktop" xlink:href="/img/icons/main-sprite.svg#logo"/>
           </svg>
         </a>
         <div class="page-header__content-wrapper">
-          <form action="https://echo.htmlacademy.ru/" method="post">
+          <form class="page-header__form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="visually-hidden" for="search">Поле ввода ключевых слов для поиска</label>
             <input class="page-header__search" type="search" name="search" id="search" placeholder="Поиск по сайту">
+            <button type="submit" class="page-header__search-button">найти</button>
           </form>
           <div class="page-header__link-wrapper page-header__link-wrapper--inner">
-            <a class="main-text" href="">Валентин Петухов</a>
+            <a class="main-text" href="">
+              <svg class="page-header__user-icon" width="13" height="14" fill="none">
+                <use xlink:href="img/icons/main-sprite.svg#user"/>
+              </svg>
+              Валентин Петухов
+            </a>
             <a class="main-text main-text--logout" href="">Выйти</a>
-            <a class="main-text" href="">Сравнить</a>
-            <a class="main-text" href="">Корзина</a>
+            <a class="main-text" href="">
+              <svg class="page-header__compare-icon" width="13" height="14" fill="none">
+                <use xlink:href="img/icons/main-sprite.svg#compare"/>
+              </svg>
+              Сравнить
+            </a>
+            <a class="main-text" href="">
+              <svg class="page-header__cart-icon" width="13" height="14" fill="none">
+                <use xlink:href="img/icons/main-sprite.svg#cart"/>
+              </svg>
+              Корзина
+            </a>
           </div>
         </div>
         <div class="page-header__catalog-wrapper catalog">

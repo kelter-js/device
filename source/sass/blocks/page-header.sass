@@ -15,6 +15,22 @@
   font-family: "Open Sans", "Arial", sans-serif
   @include fstyle(15px, 20.4px, rgba($black, 0.3), 300)
 
+.page-header__catalog-wrapper
+  position: relative
+  
+  &::before,
+  &::after
+    content: ''
+    position: absolute
+    top: 10px
+    right: -34px
+    height: 2px
+    width: 16px
+    background-color: $black-rgba
+
+  &::after
+    transform: rotate(90deg)
+
 .page-header__catalog-wrapper button
   background: none
   border: none
@@ -27,6 +43,8 @@
   letter-spacing: 3.6px
   text-decoration: none
   @include fstyle(18px, 22px, $black, 800, uppercase)
+
+  @include fadeOutState()
 
 .page-header__exit-link
   color: rgba($black, 0.3)
@@ -45,11 +63,15 @@
 .page-header__link-wrapper a
   position: relative
 
+  @include fadeOutState()
+
 .page-header__logo
   position: absolute
   top: -20px
   left: 60px
   z-index: 1
+
+  @include fadeOutState()
 
 .page-header__content-wrapper
   display: grid
@@ -57,7 +79,7 @@
   width: 100%
   margin-bottom: 50px
 
-.page-header__content-wrapper form
+.page-header__form 
   padding-left: 36px
   position: relative
   width: 114px
@@ -73,13 +95,51 @@
     background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.66671 12C7.85003 11.9998 8.99924 11.6036 9.93137 10.8747L12.862 13.8053L13.8047 12.8627L10.874 9.932C11.6034 8.99977 11.9998 7.85029 12 6.66666C12 3.726 9.60737 1.33333 6.66671 1.33333C3.72604 1.33333 1.33337 3.726 1.33337 6.66666C1.33337 9.60733 3.72604 12 6.66671 12ZM6.66671 2.66666C8.87271 2.66666 10.6667 4.46066 10.6667 6.66666C10.6667 8.87266 8.87271 10.6667 6.66671 10.6667C4.46071 10.6667 2.66671 8.87266 2.66671 6.66666C2.66671 4.46066 4.46071 2.66666 6.66671 2.66666Z' fill='black'/%3E%3C/svg%3E%0A")
 
 .page-header__search
+  position: relative
   background-color: transparent
   border: none
 
+  @include lightInState()
+
   &:focus
-    background-color: white
+    outline: none
+
     &::placeholder
       color: black
+
+.page-header__search-button
+  position: absolute
+  top: -14px
+  left: 356px
+  display: none
+  width: 82px
+  height: 50px
+  background-color: transparent
+  border: 2px solid $black
+  font-family: "Open Sans", "Arial", sans-serif
+  cursor: pointer
+
+  @include fstyle(15px, 20.4px, $black, 300, uppercase)
+
+.page-header__form:focus-within > .page-header__search-button
+  display: inline-block
+
+  &:hover
+    background-color: $black
+    color: $white
+
+  &:active
+    background-color: $black
+    color: $white-rgba
+
+  &::before
+      content: ''
+      position: absolute
+      top: 46px
+      left: -360px
+      height: 2px
+      width: 440px
+      background-color: $black
 
 .page-header__link-wrapper
   display: grid
@@ -114,6 +174,9 @@
   list-style: none
   background-color: $yellow
 
+.catalog__item a
+  @include fadeOutState()
+
 .catalog__item:last-of-type
   grid-row: 3
 
@@ -128,22 +191,6 @@
 
 .main-text--logout
   color: $black-rgba
-
-.page-header__catalog-button
-  position: relative
-  
-  &::before,
-  &::after
-    content: ''
-    position: absolute
-    top: 10px
-    right: -34px
-    height: 2px
-    width: 16px
-    background-color: $black-rgba
-
-  &::after
-    transform: rotate(90deg)
 
 .page-header__user-text
   margin-left: 24px

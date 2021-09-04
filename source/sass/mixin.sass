@@ -16,3 +16,21 @@
 
 @mixin setCenterPosition()
   margin: 0 auto
+
+@mixin fadeOutState()
+ &:hover
+  opacity: 0.6
+  
+  &:focus,
+  &:active
+    opacity: 0.3
+
+@mixin lightInState() 
+  opacity: 0.3
+
+  &:hover
+    opacity: 0.6
+  
+  &:focus,
+  &:active
+    opacity: 1

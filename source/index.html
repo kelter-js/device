@@ -29,9 +29,10 @@
         </svg>
       </a>
       <div class="page-header__content-wrapper">
-        <form action="https://echo.htmlacademy.ru/" method="post">
+        <form class="page-header__form" action="https://echo.htmlacademy.ru/" method="post">
           <label class="visually-hidden" for="search">Поле ввода ключевых слов для поиска</label>
           <input class="page-header__search" type="search" name="search" id="search" placeholder="Поиск по сайту">
+          <button type="submit" class="page-header__search-button">найти</button>
         </form>
         <div class="page-header__link-wrapper">
           <a class="main-text page-header__user-text" href="">
@@ -107,10 +108,16 @@
             <p class="main-text">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
             <div class="promo__item-navigation">
               <a class="promo__item-link button" href="#">подробнее</a>
-              <ul class="promo__carousel-list">
-                <li class="promo__carousel-selector promo__carousel-selector--selected"></li>
-                <li class="promo__carousel-selector"></li>
-                <li class="promo__carousel-selector"></li>
+              <ul class="promo__carousel-toggle-list">
+                <li class="promo__carousel-toggle-item">
+                  <button class="promo__carousel-button" type="button"></button>
+                </li>
+                <li class="promo__carousel-toggle-item">
+                  <button class="promo__carousel-button promo__carousel-button--selected" type="button"></button>
+                </li>
+                <li class="promo__carousel-toggle-item">
+                  <button class="promo__carousel-button" type="button"></button>
+                </li>
               </ul>
             </div>
             <dl class="promo__features-list">
@@ -186,22 +193,22 @@
         <h2 class="visually-hidden">Категории товаров</h2>
         <ul class="categories__list">
           <li class="categories__item">
-            <a class="categories__link" href="#">Виртуальная реальность</a>
+            <a class="categories__link" href="catalog.html">Виртуальная реальность</a>
           </li>
           <li class="categories__item">
-            <a class="categories__link" href="#">Моноподы для&nbsp;селфи</a>
+            <a class="categories__link" href="catalog.html">Моноподы для&nbsp;селфи</a>
           </li>
           <li class="categories__item">
-            <a class="categories__link" href="#">Экшн-камеры</a>
+            <a class="categories__link" href="catalog.html">Экшн-камеры</a>
           </li>
           <li class="categories__item">
-            <a class="categories__link" href="#">Фитнес-браслеты</a>
+            <a class="categories__link" href="catalog.html">Фитнес-браслеты</a>
           </li>
           <li class="categories__item">
-            <a class="categories__link" href="#">Умные часы</a>
+            <a class="categories__link" href="catalog.html">Умные часы</a>
           </li>
           <li class="categories__item">
-            <a class="categories__link" href="#">Квадрокоптеры</a>
+            <a class="categories__link" href="catalog.html">Квадрокоптеры</a>
           </li>
         </ul>
       </section>

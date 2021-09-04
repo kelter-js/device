@@ -3,7 +3,7 @@
   min-height: 380px
   margin-bottom: 96px
 
-.promo__carousel-list
+.promo__carousel-toggle-list
   display: flex
   justify-content: space-between
   width: 72px
@@ -19,7 +19,7 @@
   grid-template-columns: 1fr 1fr
   min-height: 489px
   margin: 0 auto
-  padding-top: 17px
+  padding-top: 35px
 
 .promo__carousel-item:nth-of-type(2) img
   padding-top: 43px
@@ -114,18 +114,26 @@
 .promo__item-navigation
   display: flex
   justify-content: space-between
+  align-items: center
   margin-bottom: 60px
 
-.promo__carousel-selector
+.definition-wrapper
+  display: flex
+  flex-direction: column
+
+.promo__carousel-button
   position: relative
   width: 12px
   height: 12px
+  border: none
+  background: transparent
   border: 1px solid $black
   border-radius: 50%
   box-sizing: border-box
+  cursor: pointer
 
-.promo__carousel-selector--selected
-  &::before
+.promo__carousel-button--selected
+   &::before
     content: ""
     position: absolute
     left: 50%
@@ -138,6 +146,6 @@
     border-radius: 50%
     box-sizing: border-box
 
-.definition-wrapper
+.promo__carousel-toggle-item
   display: flex
-  flex-direction: column
+  align-items: flex-start
