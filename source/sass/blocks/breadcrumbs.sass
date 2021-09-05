@@ -36,5 +36,14 @@
 .breadcrumbs a
   text-decoration: none
   font-family: "Open Sans", "Arial", sans-serif
+  opacity: 0.3
 
-  @include fstyle(14px, 19px, rgba($black, 0.3), 300)
+  @include fstyle(14px, 19px, $black, 300)
+
+  &:hover
+    opacity: 0.6
+  
+  &:focus,
+  &:active
+    opacity: 0.1
+    

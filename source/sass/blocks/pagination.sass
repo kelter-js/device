@@ -2,17 +2,18 @@
   grid-area: pagination
   display: flex
   justify-content: space-between
-  height: 45px
+  height: 70px
   width: 700px
   margin-bottom: 78px
-  padding-left: 30px
-  padding-right: 30px
-  padding-top: 25px
   background-color: $grey-light-tone
+  overflow: hidden
 
 .pagination-wrapper ul
   display: flex
+  height: 20px
   margin: 0
+  margin-top: 25px
+  margin-bottom: 25px
   padding: 0
   list-style: none
 
@@ -24,8 +25,24 @@
   text-decoration: none
   letter-spacing: 1.6px
 
-  @include fstyle(16px, 20px, rgba($black, 0.3), 800, uppercase)
+  @include fstyle(16px, 20px, $black, 800, uppercase)
+
+.pagination__link
+  @include lightInState()
 
 .pagination__link--selected,
 .pagination__movement
   color: black
+  opacity: 1
+
+.pagination__movement
+  padding: 25px 30px
+
+  &:hover
+    background-color: $grey-darkest
+
+  &:focus,
+  &:active
+    color: $black-rgba
+    
+    

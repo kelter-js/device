@@ -56,8 +56,17 @@
 .goods__comparison-button
   font-family: "Open Sans", "Arial", sans-serif
   letter-spacing: 1.3px
+  opacity: 0.5
 
   @include fstyle(13px, 18px, $black, 300)
+
+  &:hover
+    opacity: 1
+  
+  &:focus,
+  &:active
+    opacity: .2
+    
 
 .goods__item-name
   text-decoration: none

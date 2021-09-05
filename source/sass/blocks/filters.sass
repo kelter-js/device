@@ -137,6 +137,11 @@
   &::before
     opacity: 0.6
 
+.colors__input-checkbox:not(:disabled):focus + label,
+.colors__input-checkbox:not(:disabled):active + label
+  &::before
+    opacity: 1
+
 .colors__input-checkbox:disabled + label  
   opacity: 0.25
   
@@ -231,6 +236,15 @@
     width: 8px
     border-radius: 50%
     background-color: $black
+
+.bluetooth__radio:not(:disabled):hover + label
+  &::before
+    opacity: 0.6
+
+.bluetooth__radio:not(:disabled):focus + label,
+.bluetooth__radio:not(:disabled):active + label
+  &::before
+    opacity: 1
 
 .bluetooth__item
   min-height: 24px
