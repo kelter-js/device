@@ -6,8 +6,10 @@
   bottom: 0
   margin: auto
   box-shadow: 0px 10px 16px rgba($black-rgb, 0.15)
+  z-index: 1
 
 .modal--map
+  display: none
   width: 994px
   height: 593px
 
@@ -40,3 +42,79 @@
   &::before
     transform: rotate(-45deg)
 
+.modal--contact-us
+  display: none
+  width: 860px
+  height: 458px
+  padding-top: 92px
+  padding-left: 100px
+  background-color: $white
+
+.modal--contact-us .modal__close-button
+  top: 20px
+  right: 20px
+
+.modal__form
+  display: flex
+  flex-wrap: wrap
+
+.modal__label
+  @include fstyle(18px, 22px, $black, 800)
+
+.modal__input
+  height: 19px
+  width: 338px
+  margin-top: 10px
+  padding-top: 16px
+  padding-bottom: 15px
+  padding-left: 20px
+  border: none
+  background-color: $more-darker-grey
+
+.modal__user-info-group,
+.modal__user-message-group
+  margin: 0
+  padding: 0
+  border: none
+
+.modal__user-info-group
+  width: 358px
+  height: 82px
+  margin-bottom: 32px
+
+  &:first-of-type
+    margin-right: 40px
+
+.modal__client-message
+  height: 151px
+  width: 740px
+  margin-top: 10px
+  padding: 0
+  padding-top: 16px
+  padding-left: 20px
+  background-color: $more-darker-grey
+  border: none
+
+.modal__client-message,
+.modal__input
+  &::placeholder
+    font-family: "Open Sans", "Arial", sans-serif
+
+    @include fstyle(14px, 19px, rgba($black-rgb, 0.4))
+
+.modal__user-message-group
+  height: 199px
+  margin-bottom: 54px
+
+.modal__submit
+  padding: 0
+  padding-left: 28px
+  letter-spacing: 2px
+  background: none
+  border: none
+  cursor: pointer
+
+  &::before
+    left: 0
+    width: 200px
+    background-color: $yellow
