@@ -30,7 +30,7 @@ class ModalControls {
   }
 
   _keyHandler (e) {
-    if (this.#currentModal) {
+    if (e.key === 'Escape' && this.#currentModal) {
       this._removeVisibleClass(this.#currentModal);
       this.#currentModal = null;
     }
@@ -40,14 +40,18 @@ class ModalControls {
     element.classList.remove(this.#visibleClass);
   }
 
-  _openModal (e) {
-    const target = e.target;
-    const modal = this.#modals.get(target);
-
+  _closeCurrentModal (target) {
     if (this.#currentModal && !target.closest(this.#modalClass)) {
       this._removeVisibleClass(this.#currentModal);
       this.#currentModal = null;
     }
+  }
+
+  _openModal (e) {
+    const target = e.target;
+    const modal = this.#modals.get(target);
+
+    this._closeCurrentModal(target);
 
     if (!modal) {
       return;
