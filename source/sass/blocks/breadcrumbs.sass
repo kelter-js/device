@@ -14,9 +14,11 @@
   padding: 0
   list-style: none
 
+.breadcrumbs__item + .breadcrumbs__item
+  margin-left: 40px
+
 .breadcrumbs li
   position: relative
-  margin-right: 40px
 
   &:first-child
     &::before
@@ -26,7 +28,7 @@
     content: ""
     position: absolute
     top: 8px
-    left: -18px
+    left: -25px
     border: solid $black
     border-width: 0 1px 1px 0
     display: inline-block
@@ -42,8 +44,8 @@
 
   &:hover
     opacity: 0.6
-  
+
   &:focus,
   &:active
     opacity: 0.1
-    
+
