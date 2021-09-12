@@ -1,74 +1,49 @@
-class ModalControls {
-  #openElements;
-  #closeButtons;
-  #visibleClass;
-  #modalClass;
-  #currentModal;
-  #modals;
+import { VisibleControls } from './visible-control.js'
 
-  constructor () {
-    this.#openElements = [
-      document.querySelector('.contacts__send-message-button'),
-      document.querySelector('.contacts__map-image'),
-    ];
+class ModalControls extends VisibleControls {
+  _closeButtons;
+  _modalClass;
 
-    this.#modals = new Map();
-    this.#modals.set(this.#openElements[0], document.querySelector('.modal--contact-us'));
-    this.#modals.set(this.#openElements[1], document.querySelector('.modal--map'));
+  constructor (triggers, visibleClass, enableElements, closeButtons, modalClass) {
+    super(...arguments);
 
-    this.#closeButtons = [...document.querySelectorAll('.modal__close-button')];
-    this.#visibleClass = 'modal--visible';
-    this.#modalClass = '.modal';
-    this.#currentModal = null;
+    this._closeButtons = closeButtons;
+    this._modalClass = modalClass;
 
-    this._closeModals = this._closeModals.bind(this);
-    this._openModal = this._openModal.bind(this);
     this._keyHandler = this._keyHandler.bind(this);
-    this._setHandlers(this.#closeButtons, this._closeModals);
-    document.addEventListener('click', this._openModal);
+
+    document.addEventListener('click', this._openVisible);
     document.addEventListener('keydown', this._keyHandler);
+    this._setHandlers(this._closeButtons, this._clearVisibles);
+  }
+
+  _closeCurrentVisible (target) {
+    if (this._currentVisibleElements.length > 0 && !target.closest(this._modalClass)) {
+      super._clearVisibles();
+    }
   }
 
   _keyHandler (e) {
-    if (e.key === 'Escape' && this.#currentModal) {
-      this._removeVisibleClass(this.#currentModal);
-      this.#currentModal = null;
+    if (e.key === 'Escape' && this._currentVisibleElements.length > 0) {
+      super._clearVisibles();
     }
   }
 
-  _removeVisibleClass (element) {
-    element.classList.remove(this.#visibleClass);
-  }
-
-  _closeCurrentModal (target) {
-    if (this.#currentModal && !target.closest(this.#modalClass)) {
-      this._removeVisibleClass(this.#currentModal);
-      this.#currentModal = null;
-    }
-  }
-
-  _openModal (e) {
+  _openVisible (e) {
     const target = e.target;
-    const modal = this.#modals.get(target);
+    const modal = this._visibles.get(target);
 
-    this._closeCurrentModal(target);
+    this._closeCurrentVisible(target);
 
     if (!modal) {
       return;
     }
 
-    modal.classList.add(this.#visibleClass);
-    this.#currentModal = modal;
+    super._openVisible([modal]);
   }
 
   _setHandlers (elements, handler) {
     elements.forEach((element) => element.addEventListener('click', handler));
-  }
-
-  _closeModals (e) {
-    const modal = e.target.closest(this.#modalClass);
-    this._removeVisibleClass(modal);
-    this.#currentModal = null;
   }
 }
 

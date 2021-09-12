@@ -15,12 +15,17 @@
   font-family: "Open Sans", "Arial", sans-serif
   @include fstyle(15px, 20.4px, rgba($black, 0.3), 300)
 
-.page-header__catalog-wrapper
+.page-header__catalog-wrapper button
   position: relative
-  
+  background: none
+  border: none
+  margin-bottom: 17px
+  padding: 0
+  cursor: pointer
+
   &::before,
   &::after
-    content: ''
+    content: ""
     position: absolute
     top: 10px
     right: -34px
@@ -31,20 +36,18 @@
   &::after
     transform: rotate(90deg)
 
-.page-header__catalog-wrapper button
-  background: none
-  border: none
-  margin-bottom: 17px
-  padding: 0
-  cursor: pointer
-
 .page-header__catalog-wrapper button,
 .page-header__navigation a
   letter-spacing: 3.6px
   text-decoration: none
   @include fstyle(18px, 22px, $black, 800, uppercase)
 
-  @include fadeOutState()
+  &:hover
+    color: rgba($black-rgb, 0.6)
+
+  &:active
+  &:focus
+    color: rgba($black-rgb, 0.3)
 
 .page-header__exit-link
   color: rgba($black, 0.3)
@@ -79,7 +82,7 @@
   width: 100%
   margin-bottom: 50px
 
-.page-header__form 
+.page-header__form
   padding-left: 36px
   position: relative
   width: 114px
@@ -173,6 +176,12 @@
   padding-top: 12px
   list-style: none
   background-color: $yellow
+
+.catalog__list.enabled
+  display: grid
+
+.page-header__wrapper.enabled
+  z-index: 2
 
 .catalog__item a
   @include fadeOutState()

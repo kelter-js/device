@@ -51,15 +51,13 @@
 
   &:focus,
   &:active
-    
+
     .navigation-text
       color: $yellow
 
     &::before
       width: 280px
       background-color: $black
-    
-
 
 .service__button
   position: relative
@@ -67,6 +65,7 @@
   background: none
   border: none
   letter-spacing: 2px
+  cursor: pointer
 
 .service__wrapper
   position: relative
@@ -118,8 +117,7 @@
   margin-bottom: 40px
   padding: 0
 
-
-.service__item--selected
+.service__item.enabled
   width: 258px
   margin: 0
   margin-bottom: 30px
