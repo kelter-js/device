@@ -4,22 +4,27 @@
   margin-bottom: 96px
 
 .promo__carousel-toggle-list
+  position: absolute
+  right: 70px
+  top: 234px
   display: flex
   justify-content: space-between
   width: 72px
   margin: 0
   padding: 0
   list-style: none
+  z-index: 2
 
 .promo__carousel-item
   position: absolute
-  top: -163px
+  top: -146px
   right: 47px
   display: none
   grid-template-columns: 1fr 1fr
   min-height: 489px
   margin: 0 auto
   padding-top: 35px
+  opacity: 0
 
 .promo__carousel-item:nth-of-type(2) img
   padding-top: 43px
@@ -30,8 +35,10 @@
   top: 99px
   left: -59px
 
-.promo__carousel-item--enabled
+.promo__carousel-item.selected
   display: grid
+  opacity: 1
+  animation: fade-in .5s
 
 .promo__carousel-item h3,
 .promo__carousel-item p,
@@ -41,8 +48,9 @@
   padding: 0
 
 .promo__carousel-item h3
+  position: relative
   width: 495px
-  margin-top: 110px
+  margin-top: 76px
   margin-bottom: 30px
   z-index: 2
 
@@ -100,7 +108,7 @@
     right: 0
     z-index: 1
 
-    @include fstyle(179px, 219.3px, $white, 800)
+    @include fstyle(179px, 170px, $white, 800)
 
 .promo__carousel-item:nth-of-type(2) .promo__item-info
   &::after
@@ -131,7 +139,7 @@
   box-sizing: border-box
   cursor: pointer
 
-.promo__carousel-button--selected
+.promo__carousel-button.selected
    &::before
     content: ""
     position: absolute
@@ -148,3 +156,7 @@
 .promo__carousel-toggle-item
   display: flex
   align-items: flex-start
+
+.promo__item-header--second
+  margin-top: 74px
+  margin-bottom: 49px

@@ -1,6 +1,7 @@
 import { ModalControls } from './modal-control.js'
 import { ServiceControl } from './service-control.js'
-import { HeaderControl } from './header-controls.js'
+import { HeaderControl } from './header-control.js'
+import { PromoControl } from './promo-control.js'
 import { Constants } from './constants.js'
 
 if (Constants.getModal()) {
@@ -26,5 +27,13 @@ if (Constants.getHeader()) {
     Constants.getHeaderTrigger(),
     Constants.getHeaderVisibleClass(),
     Constants.getHeaderParentClass(),
+  );
+}
+
+if (Constants.getPromo()) {
+  const promoControl = new PromoControl(
+    Constants.getPromoTriggers(),
+    Constants.getPromoVisibleClass(),
+    Constants.getPromoParentElements(),
   );
 }

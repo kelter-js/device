@@ -98,7 +98,18 @@
       <h1 class="visually-hidden">Device - Онлайн супермаркет по продаже электротоваров для вашего творчества</h1>
       <section class="promo">
         <h2 class="visually-hidden">Товары недели</h2>
-        <div class="promo__carousel-item promo__carousel-item--enabled">
+        <ul class="promo__carousel-toggle-list">
+          <li class="promo__carousel-toggle-item">
+            <button class="promo__carousel-button selected" type="button"></button>
+          </li>
+          <li class="promo__carousel-toggle-item">
+            <button class="promo__carousel-button" type="button"></button>
+          </li>
+          <li class="promo__carousel-toggle-item">
+            <button class="promo__carousel-button" type="button"></button>
+          </li>
+        </ul>
+        <div class="promo__carousel-item selected">
           <picture>
             <source type="image/webp" srcset="img/promo-slider-3rd.webp 1x, img/promo-slider-3rd@2x.webp 2x">
             <img src="img/promo-slider-3rd.png" srcset="img/promo-slider-3rd@2x.png 2x" alt="Изображение селфи-палки" height="486" width="384">
@@ -108,17 +119,6 @@
             <p class="main-text">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
             <div class="promo__item-navigation">
               <a class="promo__item-link button" href="#">подробнее</a>
-              <ul class="promo__carousel-toggle-list">
-                <li class="promo__carousel-toggle-item">
-                  <button class="promo__carousel-button" type="button"></button>
-                </li>
-                <li class="promo__carousel-toggle-item">
-                  <button class="promo__carousel-button promo__carousel-button--selected" type="button"></button>
-                </li>
-                <li class="promo__carousel-toggle-item">
-                  <button class="promo__carousel-button" type="button"></button>
-                </li>
-              </ul>
             </div>
             <dl class="promo__features-list">
               <div class="definition-wrapper">
@@ -146,11 +146,6 @@
             <p class="main-text">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
             <div class="promo__item-navigation">
               <a class="promo__item-link button" href="#">подробнее</a>
-              <ul class="promo__carousel-list">
-                <li class="promo__carousel-selector"></li>
-                <li class="promo__carousel-selector promo__carousel-selector--selected"></li>
-                <li class="promo__carousel-selector"></li>
-              </ul>
             </div>
             <dl class="promo__features-list">
               <div class="definition-wrapper">
@@ -166,15 +161,10 @@
             <img src="img/promo-slider-1st.png" srcset="img/promo-slider-1st@2x.png 2x" alt="Изображение дрона" height="334" width="526">
           </picture>
           <div class="promo__item-info">
-            <h3 class="promo__item-header">Порхает как бабочка, жалит как пчела!</h3>
+            <h3 class="promo__item-header promo__item-header--second">Порхает как бабочка, жалит как пчела!</h3>
             <p class="main-text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
             <div class="promo__item-navigation">
               <a class="promo__item-link button" href="#">подробнее</a>
-              <ul class="promo__carousel-list">
-                <li class="promo__carousel-selector"></li>
-                <li class="promo__carousel-selector"></li>
-                <li class="promo__carousel-selector promo__carousel-selector--selected"></li>
-              </ul>
             </div>
             <dl class="promo__features-list">
               <div class="definition-wrapper">

@@ -58,7 +58,23 @@ class Constants {
     return [
       document.querySelector('.page-header__wrapper'),
       document.querySelector('.catalog__list'),
-    ]
+    ];
+  }
+
+  static getPromo () {
+    return document.querySelector('.promo');
+  }
+
+  static getPromoTriggers () {
+    return [...document.querySelectorAll('.promo__carousel-button')];
+  }
+
+  static getPromoVisibleClass () {
+    return 'selected';
+  }
+
+  static getPromoParentElements () {
+    return [...document.querySelectorAll('.promo__carousel-item')];
   }
 }
 
