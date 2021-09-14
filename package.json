@@ -3,8 +3,12 @@
   "private": true,
   "description": "Device",
   "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/plugin-proposal-private-methods": "^7.14.5",
+    "@babel/preset-env": "^7.15.6",
     "@htmlacademy/editorconfig-cli": "1.0.0",
     "autoprefixer": "10.0.2",
+    "babel-loader": "^8.2.2",
     "browser-sync": "2.26.13",
     "file-loader": "6.2.0",
     "gulp": "4.0.2",
@@ -13,12 +17,11 @@
     "gulp-postcss": "9.0.0",
     "gulp-sass": "4.0.1",
     "gulp-sourcemaps": "3.0.0",
-    "gulp-webp": "^4.0.1",
     "postcss": "8.1.7",
     "style-loader": "2.0.0",
     "stylelint": "^13.7.2",
     "stylelint-scss": "^3.19.0",
-    "webpack": "5.27.2",
+    "webpack": "^5.27.2",
     "webpack-stream": "^4.0.1"
   },
   "scripts": {
